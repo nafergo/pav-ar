@@ -1,0 +1,150 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.36",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "instant2",
+            "rotation" : [
+                0,
+                0,
+                0.0017453283071517944,
+                1
+            ],
+            "translation" : [
+                0.1372479945421219,
+                0,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Default OBJ.001",
+            "normalTexture" : {
+                "index" : 0,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "instant2",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0
+        },
+        {
+            "source" : 1
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "nor_bake2",
+            "uri" : "nor_bake2.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "col_bake2",
+            "uri" : "col_bake2.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 38493,
+            "max" : [
+                0.7794099450111389,
+                0.9393203258514404,
+                0.9561176300048828
+            ],
+            "min" : [
+                -1.0703178644180298,
+                -1.194859504699707,
+                -0.9025721549987793
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 38493,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 38493,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 58962,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 461916,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 461916,
+            "byteOffset" : 461916
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 307944,
+            "byteOffset" : 923832
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 117924,
+            "byteOffset" : 1231776
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1349700,
+            "uri" : "trans.bin"
+        }
+    ]
+}
