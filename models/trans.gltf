@@ -18,14 +18,30 @@
             "name" : "instant2",
             "rotation" : [
                 0,
+                -0.0009696271736174822,
                 0,
-                0.0017453283071517944,
                 1
+            ]
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 0,
+                        "path" : "rotation"
+                    }
+                }
             ],
-            "translation" : [
-                0.1372479945421219,
-                0,
-                0
+            "name" : "instant2Action",
+            "samplers" : [
+                {
+                    "input" : 4,
+                    "interpolation" : "LINEAR",
+                    "output" : 5
+                }
             ]
         }
     ],
@@ -89,13 +105,13 @@
             "componentType" : 5126,
             "count" : 38493,
             "max" : [
-                0.7794099450111389,
-                0.9393203258514404,
+                0.9196344614028931,
+                2.0820047855377197,
                 0.9561176300048828
             ],
             "min" : [
-                -1.0703178644180298,
-                -1.194859504699707,
+                -0.929676353931427,
+                -0.04950657859444618,
                 -0.9025721549987793
             ],
             "type" : "VEC3"
@@ -117,6 +133,24 @@
             "componentType" : 5123,
             "count" : 58962,
             "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 10,
+            "max" : [
+                0.4166666666666667
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 10,
+            "type" : "VEC4"
         }
     ],
     "bufferViews" : [
@@ -139,11 +173,21 @@
             "buffer" : 0,
             "byteLength" : 117924,
             "byteOffset" : 1231776
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 40,
+            "byteOffset" : 1349700
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 160,
+            "byteOffset" : 1349740
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1349700,
+            "byteLength" : 1349900,
             "uri" : "trans.bin"
         }
     ]
