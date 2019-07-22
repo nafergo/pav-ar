@@ -18,9 +18,14 @@
             "name" : "instant2",
             "rotation" : [
                 0,
-                -0.0009696271736174822,
+                -0.01050680410116911,
                 0,
-                1
+                0.999944806098938
+            ],
+            "scale" : [
+                0.5,
+                0.5,
+                0.5
             ]
         }
     ],
@@ -137,9 +142,9 @@
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 10,
+            "count" : 300,
             "max" : [
-                0.4166666666666667
+                12.5
             ],
             "min" : [
                 0.041666666666666664
@@ -149,7 +154,7 @@
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 10,
+            "count" : 300,
             "type" : "VEC4"
         }
     ],
@@ -176,18 +181,18 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 40,
+            "byteLength" : 1200,
             "byteOffset" : 1349700
         },
         {
             "buffer" : 0,
-            "byteLength" : 160,
-            "byteOffset" : 1349740
+            "byteLength" : 4800,
+            "byteOffset" : 1350900
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1349900,
+            "byteLength" : 1355700,
             "uri" : "trans.bin"
         }
     ]
