@@ -6,23 +6,25 @@
     <script src="data/aframe.min.js"></script>
     <script src="data/aframe-ar.min.js"></script>
     <script src="data/aframe-extras.loaders.min.js"></script>
+    <script src="data/events.js"></script>
+    <script src="data/aframe-shadow-plane.js"></script>
 
 
     <body style="margin : 0px; overflow: hidden;">
 
 
 <!-- the stuff! -->
-        <a-scene embedded arjs="trackingMethod: best;sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;">
-          <a-assets>
-            <a-asset-item id="teste" src="models/trans.gltf">
-            <a-asset-item id="lucerna" src="models/lucerna.gltf">
-<!--            <a-asset-item id="doisobj" src="models/dois.obj"></a-asset-item>
-            <a-asset-item id="doismtl" src="models/dois.mtl"></a-asset-item> -->
+        <a-scene  vr-mode-ui="enabled: false"
+        embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+        renderer="antialias: true;">
 
+          <a-assets>
+            <a-asset-item id="jose" src="models/jc_export2.gltf"></a-asset-item>
+            <a-asset-item id="lucerna" src="models/lucerna.gltf"></a-asset-item>
           </a-assets>
 
 
-	      <a-marker preset="hiro">
+	      <a-marker preset="hiro"  smooth="true">
           <a-box position="0 0.5 0" material="opacity: 0.5; side:double; color:red;">
             <a-torus-knot radius="0.26" radius-tubular="0.05" material="color:yellow;"
             animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
@@ -31,15 +33,18 @@
 	      </a-marker>
 
 
-
-          <a-marker type="pattern" url="markers/pattern-prehist/pattern-prehist.patt">
-            <!-- <a-entity obj-model="obj: #doisobj; mtl: #doismtl" scale=".5"></a-entity> -->
-            <a-gltf-model src="#teste" animation-mixer="loop:repeat" scale="1.5 1.5 1.5"></a-gltf-model>
+          <a-marker type="pattern" url="markers/pattern-prehist/pattern-prehist.patt"  smooth="true">
+            <a-gltf-model src="#lucerna" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true"></a-gltf-model>
           </a-marker>
 
-          <a-marker type="pattern" url="markers/pattern-josecoelho/pattern-josecoelho.patt">
-                        <!-- <a-entity obj-model="obj: #doisobj; mtl: #doismtl" scale=".5"></a-entity> -->
-            <a-gltf-model src="#lucerna"  scale="0.9 0.9 0.9"></a-gltf-model>
+
+          <a-marker type="pattern" url="markers/pattern-josecoelho/pattern-josecoelho.patt"  smooth="true" animation-mixer>
+
+            <a-gltf-model src="#jose"  scale="1.5 1.5 1.5" shadow></a-gltf-model>
+            <!-- add shadow only ground -->
+            <a-entity position="0 0 0" shadowonly-plane="width: 50; height: 50; opacity: 0.7">
+            </a-entity>
+
           </a-marker>
 
 
