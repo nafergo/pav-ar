@@ -1,26 +1,29 @@
 <!doctype HTML>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>PAV AR</title>
+
     <script src="data/aframe.min.js"></script>
     <script src="data/aframe-ar.min.js"></script>
     <script src="data/aframe-extras.loaders.min.js"></script>
-    <script src="data/events.js"></script>
     <script src="data/aframe-shadow-plane.js"></script>
-
+  </head>
 
     <body style="margin : 0px; overflow: hidden;">
 
 
 <!-- the stuff! -->
-        <a-scene  vr-mode-ui="enabled: false"
-        embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-        renderer="antialias: true;">
+        <a-scene
+        embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
+        renderer="antialias: true;"
+        vr-mode-ui="enabled: false;">
 
           <a-assets>
-            <a-asset-item id="jose" src="models/jc_export2.gltf"></a-asset-item>
-            <a-asset-item id="lucerna" src="models/lucerna.gltf"></a-asset-item>
+            <a-asset-item id="jose" src="models/josecoelho_export.gltf"></a-asset-item>
+            <a-asset-item id="lucerna" src="models/lucerna_export.gltf"></a-asset-item>
+            <a-asset-item id="vespasiano" src="models/vespasiano_export.gltf"></a-asset-item>
+            <a-asset-item id="ara" src="models/ara_export.gltf"></a-asset-item>
           </a-assets>
 
 
@@ -34,24 +37,26 @@
 
 
           <a-marker type="pattern" url="markers/pattern-prehist/pattern-prehist.patt"  smooth="true">
-            <a-gltf-model src="#lucerna" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true"></a-gltf-model>
+            <a-gltf-model src="#lucerna" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true" ></a-gltf-model>
+          </a-marker>
+
+          <a-marker type="pattern" url="markers/pattern-viseu/pattern-viseu.patt"  smooth="true">
+            <a-gltf-model src="#vespasiano" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true" ></a-gltf-model>
+          </a-marker>
+
+          <a-marker type="pattern" url="markers/pattern-brasao/pattern-brasao.patt"  smooth="true">
+            <a-gltf-model src="#ara" scale="1 1 1" ></a-gltf-model>
           </a-marker>
 
 
           <a-marker type="pattern" url="markers/pattern-josecoelho/pattern-josecoelho.patt"  smooth="true" animation-mixer>
-
             <a-gltf-model src="#jose"  scale="1.5 1.5 1.5" shadow></a-gltf-model>
-            <!-- add shadow only ground -->
-            <a-entity position="0 0 0" shadowonly-plane="width: 50; height: 50; opacity: 0.7">
-            </a-entity>
-
+            <a-entity position="0 0 0" shadowonly-plane="width: 50; height: 50; opacity: 0.7"></a-entity>
           </a-marker>
+
 
 
           <a-entity camera></a-entity>
       </a-scene>
-
-
-
     </body>
 </html>
