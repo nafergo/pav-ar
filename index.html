@@ -3,10 +3,14 @@
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-            <a-scene
+    
+    	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; selectCamera: true; debugUIEnabled: false;'>
+  <!--          <a-scene
         embedded arjs="debugUIEnabled: false;"       
         renderer="antialias: true;"
-        vr-mode-ui="enabled: false;">      
+        vr-mode-ui="enabled: false;">     
+-->
+
           <a-assets>
             <a-asset-item id="lucerna" src="models/lucerna_export.gltf"></a-asset-item>
           </a-assets>
