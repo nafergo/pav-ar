@@ -4,7 +4,8 @@
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
             <a-scene
-        embedded arjs        renderer="antialias: true;"
+        embedded arjs="debugUIEnabled: false;"       
+        renderer="antialias: true;"
         vr-mode-ui="enabled: false;">      
           <a-assets>
             <a-asset-item id="lucerna" src="models/lucerna_export.gltf"></a-asset-item>
