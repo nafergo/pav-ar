@@ -17,12 +17,27 @@
 
           <a-assets>
             <a-asset-item id="lucerna" src="models/lucerna_export.gltf"></a-asset-item>
+            <a-asset-item id="vespasiano" src="models/vespasiano_export.gltf"></a-asset-item>
+            <a-asset-item id="ara" src="models/ara_export.gltf"></a-asset-item>
           </a-assets>
       
       
       <a-marker preset="hiro">
             <a-gltf-model src="#lucerna" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true" ></a-gltf-model>      </a-marker>
-      <a-entity camera></a-entity>
+         
+          <a-marker type="pattern" url="markers/pattern-prehist/pattern-prehist.patt"  smooth="true">
+            <a-gltf-model src="#ara" scale="1 1 1" animation="property: rotation; to:0 360 0; dur: 25000; easing: linear; loop: true" ></a-gltf-model>
+          </a-marker>
+        
+ 
+          <a-marker type="pattern" url="markers/pattern-josecoelho/pattern-josecoelho.patt"  smooth="true" animation-mixer>
+            <a-gltf-model src="#vespasiano"  scale="1.5 1.5 1.5" shadow></a-gltf-model>
+            <a-entity position="0 0 0" shadowonly-plane="width: 50; height: 50; opacity: 0.7"></a-entity>
+          </a-marker>        
+        
+        
+        
+        <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
